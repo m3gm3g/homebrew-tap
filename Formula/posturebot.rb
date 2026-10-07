@@ -1,8 +1,8 @@
 class Posturebot < Formula
   desc "Tiny 8-bit terminal bot that reminds you to check your posture"
   homepage "https://github.com/m3gm3g/PostureBot"
-  url "https://github.com/m3gm3g/PostureBot/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "56611349f90737815ac14491df219293d5cea2f548f82eaa3f862727a6e5e2a9"
+  url "https://github.com/m3gm3g/PostureBot/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "a912e04723d8a8a93b9dba7a507e58a377a752908ea34b0ceb5360a42df5ed8a"
   license "MIT"
 
   depends_on "python@3.14"
@@ -17,6 +17,6 @@ class Posturebot < Formula
   end
 
   test do
-    assert_match "--minutes", shell_output("#{bin}/posturebot --help")
+    assert_match "usage: posturebot", shell_output("#{bin}/posturebot --help")
   end
 end
