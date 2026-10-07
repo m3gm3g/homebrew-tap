@@ -1,6 +1,6 @@
 # homebrew-tap
 
-Homebrew formulae by Meg Schmidt / Kitschy Lemon.
+Homebrew formulae by Megan Schmidt / Kitschy Lemon.
 
 ```
 brew install m3gm3g/tap/posturebot
