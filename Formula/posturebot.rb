@@ -8,9 +8,12 @@ class Posturebot < Formula
   depends_on "python@3.14"
 
   def install
-    bin.install "posture_bot.py" => "posturebot"
-    rewrite_shebang Language::Python.rewrite_python_shebang(Formula["python@3.14"].opt_bin/"python3.14"),
-                    bin/"posturebot"
+    libexec.install "posture_bot.py"
+    (bin/"posturebot").write <<~EOS
+      #!/bin/bash
+      exec "#{Formula["python@3.14"].opt_bin}/python3.14" "#{libexec}/posture_bot.py" "$@"
+    EOS
+    chmod 0755, bin/"posturebot"
   end
 
   test do
