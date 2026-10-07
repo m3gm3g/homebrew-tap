@@ -9,7 +9,8 @@ class Posturebot < Formula
 
   def install
     bin.install "posture_bot.py" => "posturebot"
-    rewrite_shebang detected_python_shebang, bin/"posturebot"
+    rewrite_shebang Language::Python.rewrite_python_shebang(Formula["python@3.14"].opt_bin/"python3.14"),
+                    bin/"posturebot"
   end
 
   test do
