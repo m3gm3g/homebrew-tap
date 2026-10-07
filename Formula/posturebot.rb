@@ -17,6 +17,6 @@ class Posturebot < Formula
   end
 
   test do
-    assert_match "usage: posturebot", shell_output("#{bin}/posturebot --help")
+    assert_match "--minutes", shell_output("#{bin}/posturebot --help")
   end
 end
