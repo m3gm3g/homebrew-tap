@@ -11,7 +11,7 @@ class Posturebot < Formula
     libexec.install "posture_bot.py"
     (bin/"posturebot").write <<~EOS
       #!/bin/bash
-      exec "#{Formula["python@3.14"].opt_bin}/python3.14" "#{libexec}/posture_bot.py" "$@"
+      exec "#{formula_opt_bin("python@3.14")}/python3.14" "#{libexec}/posture_bot.py" "$@"
     EOS
     chmod 0755, bin/"posturebot"
   end
