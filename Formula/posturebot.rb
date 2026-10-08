@@ -1,8 +1,8 @@
 class Posturebot < Formula
   desc "Tiny 8-bit terminal bot that reminds you to check your posture"
   homepage "https://github.com/m3gm3g/PostureBot"
-  url "https://github.com/m3gm3g/PostureBot/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "85d89ad18f8a27d14a5fd0ff674983571db5af8e3169291a84c4d5dcfaf1a116"
+  url "https://github.com/m3gm3g/PostureBot/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "8bd0519e841f5ccd4d26ff4c9a53f6923f14169b8c14cefcf40546adc3f07cc7"
   license "MIT"
 
   depends_on "python@3.14"
